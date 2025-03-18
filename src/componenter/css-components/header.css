@@ -1,0 +1,26 @@
+
+.header {
+    width: 100vw;
+    height: 20vh;
+    background-color: brown;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Barriecito", system-ui;
+    color: white;
+}
+.header > img {
+    height: 100%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 40vw;
+}
+nav > a, nav > a:visited {
+    color: white;
+    font-size: 2rem;
+    
+}
+

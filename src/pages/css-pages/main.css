@@ -1,0 +1,104 @@
+/* Stili generali */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Tema chiaro */
+.light-mode {
+  background-color: orange;   /* Sfondo bianco per il tema chiaro */
+  color: black;  /* Testo nero per il tema chiaro */
+}
+
+/* Tema scuro */
+.dark-mode {
+  background-color: black;  /* Sfondo nero per il tema scuro */
+  color: white;  /* Testo bianco per il tema scuro */
+}
+
+/* Stili per il contenitore principale */
+.main {
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Stili per i prodotti */
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  width: 100%;
+  justify-content: space-around;
+}
+
+/* Stili generali per le carte dei prodotti */
+.product-card {
+  width: 200px;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.product-card > img {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px;
+}
+
+.product-card > h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.product-card > p {
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+/* Tema scuro - Prodotti */
+.dark-mode .product-card {
+  background-color: #333;  /* Scuro per le card */
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark-mode .product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Tema chiaro - Prodotti */
+.light-mode .product-card {
+  background-color: white;  /* Chiaro per le card */
+  color: black;
+  border: 1px solid #ddd;
+}
+
+.light-mode .product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Stili per il bottone */
+button {
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: gray;
+  color: white;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #444;
+}
