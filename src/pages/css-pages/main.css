@@ -1,4 +1,3 @@
-/* Stili generali */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,39 +6,38 @@ body {
   width: 100%;
 }
 
-/* Tema chiaro */
 .light-mode {
-  background-color: orange;   /* Sfondo bianco per il tema chiaro */
-  color: black;  /* Testo nero per il tema chiaro */
+  background-color: rgb(252, 196, 92);
+  color: black;
 }
 
-/* Tema scuro */
 .dark-mode {
-  background-color: black;  /* Sfondo nero per il tema scuro */
-  color: white;  /* Testo bianco per il tema scuro */
+  background-color: black;
+  color: white;
 }
 
-/* Stili per il contenitore principale */
 .main {
   padding: 20px;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  margin: auto;
 }
 
-/* Stili per i prodotti */
 .products-container {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 20px;
-  width: 100%;
   justify-content: space-around;
+  align-items: flex-start;
+  width: 50%;
+  margin-top: 20px;
 }
 
-/* Stili generali per le carte dei prodotti */
 .product-card {
   width: 200px;
+  margin-bottom: 2rem;
   border-radius: 8px;
   padding: 15px;
   text-align: center;
@@ -47,47 +45,40 @@ body {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.product-card > img {
+.product-card:hover {
+  transform: scale(1.05);
+}
+
+.product-card img {
   width: 100%;
   height: 150px;
   border-radius: 5px;
 }
 
-.product-card > h3 {
+.product-card h3 {
   font-size: 1.2rem;
   margin: 10px 0;
 }
 
-.product-card > p {
+.product-card p {
   font-size: 1rem;
   margin: 5px 0;
 }
 
-/* Tema scuro - Prodotti */
-.dark-mode .product-card {
-  background-color: #333;  /* Scuro per le card */
-  color: white;
-  border: 1px solid #555;
-}
-
-.dark-mode .product-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-}
-
-/* Tema chiaro - Prodotti */
 .light-mode .product-card {
-  background-color: white;  /* Chiaro per le card */
+  background-color: white;
   color: black;
   border: 1px solid #ddd;
-}
-
-.light-mode .product-card:hover {
-  transform: scale(1.05);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Stili per il bottone */
+.dark-mode .product-card {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+}
+
 button {
   padding: 10px;
   margin: 10px;
@@ -101,4 +92,71 @@ button {
 
 button:hover {
   background-color: #444;
+}
+
+.cart-container {
+  width: 25%;
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.cart-icon {
+  font-size: 24px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.cart-count {
+  background-color: red;
+  color: white;
+  font-size: 14px;
+  border-radius: 50%;
+  padding: 5px 10px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+}
+
+.cart-section {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.dark-mode .cart-section {
+  background-color: #333;
+  color: white;
+  border: 1px solid #555;
+}
+
+.cart-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.clear-cart {
+  width: 100%;
+  background-color: red;
+}
+
+.clear-cart:hover {
+  background-color: darkred;
+}
+
+.main-container {
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
 }
