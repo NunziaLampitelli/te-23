@@ -31,6 +31,10 @@ body {
   margin-top: 20px;
   width: 100%;
   justify-content: space-around;
+  align-items: flex-start;
+  width: 50%;
+  margin-top: 20px;
+  max-height: fit-content;
 }
 
 .product-card {
