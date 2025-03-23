@@ -1,8 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import Header from "./componenter/Header";
-import Menu from "./pages/menu";
-import Login from "./pages/login";
+import Menu from "./pages/Menu";
+import Login from "./pages/Login";
 import Checkout from "./pages/checkout";
 import PrivateRoute from "./componenter/PrivateRoute";
 
