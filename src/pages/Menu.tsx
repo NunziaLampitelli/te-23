@@ -4,6 +4,7 @@ import PicOne from "../assets/pictures/hamburger.jpg";
 import PicTwo from "../assets/pictures/fries.jpg";
 import PicThree from "../assets/pictures/fish-and-chips.webp";
 import Product from "../interfaces/Product";
+import { Link } from "react-router-dom";
 
 export default function Menu() {
 	const [isDarkMode, setIsDarkMode] = useState(false); // variable to manage the theme of the page and the function that updates it's value. It starts with a boolean value that is false (so we start always we light mode)
@@ -151,9 +152,14 @@ export default function Menu() {
 							</ul>
 						)}
 						{cart.length > 0 && (
+							<>
 							<button onClick={clearCart} className="clear-cart">
 								Clear Cart
 							</button>
+							<Link to="/checkout">
+								<button className="pay-button">Pay</button>
+							</Link>
+							</>
 						)}
 					</section>
 				</div>

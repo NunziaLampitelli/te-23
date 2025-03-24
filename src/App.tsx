@@ -13,6 +13,7 @@ function App() {
 		<div>
 			<Header />
 			<Routes>
+				<Route path="/menu" element={<Menu />} />
 				<Route
 					path="/login"
 					element={<Login setIsLoggedIn={setIsLoggedIn} />}
@@ -25,7 +26,6 @@ function App() {
 						</PrivateRoute>
 					}
 				/>
-				<Route path="/menu" element={<Menu />} />
 			</Routes>
 		</div>
 	);

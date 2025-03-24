@@ -8,7 +8,7 @@ interface LoginProps {
 function Login({ setIsLoggedIn }: LoginProps) {
 	const [isLoggedIn, setLocalLogin] = useState(false);
 
-	const handleLogin = () => {
+	function handleLogin() {
 		// Simulate login logic and update the login state in the parent component
 		setIsLoggedIn(true); // Update the parent component state to logged in
 		setLocalLogin(true); // Update local state for immediate UI change
